@@ -1,0 +1,35 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Flask App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+
+  <header>
+    <nav class="right-align">
+      <form action="/login" method="GET">
+        <button class="button" type="submit">Авторизация</button>
+      </form>
+
+      <form action="{{ url_for('register') }}" method="GET">
+        <button class="button" type="submit">Регистрация</button>
+      </form>
+
+      <form action="{{ url_for('view_profiles') }}" method="GET">
+        <button class="button" type="submit">Анкеты</button>
+      </form>
+     
+    </nav>
+   
+  </header>
+
+  <main>
+    <h1>P r o S e r v i c e</h1>
+  </main>
+
+</body>
+</html>

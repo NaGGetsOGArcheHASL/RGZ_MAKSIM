@@ -1,0 +1,33 @@
+<!-- templates/register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main2.css') }}">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="{{ url_for('index') }}">Главная страница</a>
+      <a href="{{ url_for('login') }}">Авторизация</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Registration</h1>
+    <form action="{{ url_for('register') }}" method="POST">
+      <label for="username">ФИО:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="submit">Зарегестрироваться</button>
+    </form>
+  </main>
+
+</body>
+</html>

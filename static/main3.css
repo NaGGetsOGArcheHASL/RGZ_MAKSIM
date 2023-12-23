@@ -1,0 +1,81 @@
+/* static/css/main.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #4b0082; /* темно-фиолетовый цвет для body */
+  }
+  
+  header {
+    padding: 10px;
+    text-align: center;
+    font-size: 150%;
+    color: #fff;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a { 
+  margin-left: 70px;
+  margin-right: 70px;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 150%;
+  color: #fff;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #15b300;
+}
+  main {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Дополнительные стили для фонового изображения */
+  body {
+    background: url('/static/reg_log.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  
+  main h2 {
+    color: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 990%; /* изменено: размер текста увеличен */
+    margin-bottom: 40px; /* добавлено: отступ снизу */
+    margin-top: 10%; /* добавлено: отступ сверху */
+    text-shadow: 3px 4px 5px  rgb(0, 25, 249);/* добавлено: тень текста */
+  }
+  
+  
+  input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #0062ff;
+    color: white;
+    padding: 15px 30px; /* Увеличил размер кнопки */
+    border: none;
+    border-radius: 15px; /* Закругление углов кнопки */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }

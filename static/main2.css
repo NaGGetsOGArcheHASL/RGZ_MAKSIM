@@ -1,0 +1,98 @@
+/* static/css/main.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #4b0082; /* темно-фиолетовый цвет для body */
+  }
+  
+  header {
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  
+  nav a {
+    background-color: #0062ff; 
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+    border-radius: 15px; 
+    font-size: 60%;/* Закругление углов кнопки */
+  }
+  nav a:hover {
+    background-color: #45a049;
+    border-radius: 15px; /* Закругление углов кнопки */
+  }
+  main {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Дополнительные стили для фонового изображения */
+  body {
+    background: url('/static/reg_log.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  
+  main h1 {
+    color: #0062ff;
+    font-size: 300%; /* изменено: размер текста увеличен */
+    margin-bottom: 40px; /* добавлено: отступ снизу */
+    text-shadow: 3px 4px 5px  rgb(255, 255, 255);/* добавлено: тень текста */
+  }
+  
+  main h2 {
+    color: #ffffff;
+    font-size: 200%; /* изменено: размер текста увеличен */
+    margin-bottom: 40px; /* добавлено: отступ снизу */
+    text-shadow: 3px 4px 5px  rgb(0, 25, 249);/* добавлено: тень текста */
+  }
+  
+  form {
+    margin-top: 50px;
+    font-size: 150%;
+    color: #ffffff;
+    
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #0062ff;
+    color: white;
+    padding: 15px 30px; /* Увеличил размер кнопки */
+    border: none;
+    border-radius: 15px; /* Закругление углов кнопки */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

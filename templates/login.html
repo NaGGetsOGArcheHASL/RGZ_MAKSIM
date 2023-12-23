@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторизация</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main2.css') }}">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="{{ url_for('index') }}">Главная страница</a>
+      <a href="{{ url_for('register') }}">Регистрация</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Вход</h1>
+    <form method="post" action="{{ url_for('login') }}">
+      <label for="username">ФИО:</label>
+      <input type="text" id="username" name="username" required>
+      <br>
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+      <br>
+      <button type="submit">Войти</button>
+    </form>
+
+    {% if errors %}
+      <div class="error">
+        {{ errors }}
+      </div>
+    {% endif %}
+
+  </main>
+
+</body>
+</html>

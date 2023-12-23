@@ -1,0 +1,37 @@
+<!-- templates/delete_account.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="user-info">
+                <p style="color: aliceblue;">{{ session['username'] }}!</p>
+            </div>
+                <a href="{{ url_for('logout') }}">Выйти</a>
+            
+        </nav>
+        
+    </header>
+    <main>
+        <h1 style="font-size: 700%;">P r o S e r v i c e</h1>
+        <h2>Удалить аккаунт</h2>
+        <p style="color: aliceblue;">Вы уверены, что хотите удалить свой аккаунт?</p>
+
+        <form method="post" action="{{ url_for('delete_account') }}">
+            <input  style="color: aliceblue;background-color: rgb(0, 56, 208);" type="submit" value="Удалить аккаунт">
+        </form>
+    </main>
+    
+
+    <footer>
+       <nav><a href="{{ url_for('main') }}">На главную</a></nav>
+    </footer>
+</body>
+</html>

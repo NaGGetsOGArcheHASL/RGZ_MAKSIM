@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiles Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Анкета</h1>
+    <form method="POST" action="{{ url_for('profiles_form') }}">
+        <label for="name">ФИО:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="service_type">Тип услугиe:</label>
+        <select id="service_type" name="service_type" required>
+            <option value="tutor">Репетитор</option>
+            <option value="accountant">Бухгалтер</option>
+            <option value="programmer">Программист</option>
+        </select>
+
+        <label for="experience">Стаж:</label>
+        <input type="text" id="experience" name="experience" required>
+
+        <label for="service_price">Стоимость услуги:</label>
+        <input type="text" id="service_price" name="service_price" required>
+
+        <label for="about_me">О себе:</label>
+        <textarea id="about_me" name="about_me" required></textarea>
+
+        <button type="submit">Готово</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Profiles</title>
+</head>
+<body>
+
+<h1>Анкеты</h1>
+
+<!-- Добавьте форму поиска перед списком профилей -->
+<form method="GET" action="{{ url_for('view_profiles') }}">
+    <label for="service_type">Тип услуги :</label>
+    <select id="service_type" name="service_type">
+        <option value="">Все</option>
+        <option value="Tutor">Репетитор</option>
+        <option value="Accountant">Бухгалтер</option>
+        <option value="Programmer">Программист</option>
+    </select>
+
+    <label for="min_experience">Минимальный стаж:</label>
+    <input type="text" id="min_experience" name="min_experience">
+
+    <label for="max_experience">Максимальный стаж:</label>
+    <input type="text" id="max_experience" name="max_experience">
+
+    <label for="min_price">Минимальная цена:</label>
+    <input type="text" id="min_price" name="min_price">
+
+    <label for="max_price">Максимальная цена :</label>
+    <input type="text" id="max_price" name="max_price">
+
+    <button type="submit">Поиск</button>
+</form>
+
+<ul>
+    {% for profile in profiles %}
+        <li>
+            <h2>{{ profile[1] }}</h2>
+            <p><strong>Service Type:</strong> {{ profile[2] }}</p>
+            <p><strong>Experience:</strong> {{ profile[3] }}</p>
+            <p><strong>Service Price:</strong> {{ profile[4] }}</p>
+            <p><strong>About Me:</strong> {{ profile[5] }}</p>
+            <p><strong>Created At:</strong> {{ profile[6] }}</p>
+        </li>
+    {% endfor %}
+</ul>
+
+{% if profiles %}
+    <form method="GET" action="{{ url_for('view_profiles') }}">
+        <input type="hidden" name="page" value="{{ page + 1 }}">
+        <button type="submit">Следующие</button>
+    </form>
+{% endif %}
+
+    <footer>
+        <nav><a href="{{ url_for('index') }}">На главную</a></nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main>
+    <h1>Редактирование анкеты</h1>
+    <form method="POST" action="{{ url_for('edit_profile') }}" enctype="multipart/form-data">
+        <label for="new_name">ФИО:</label>
+        <input type="text" id="new_name" name="new_name" value="{{ current_user.name }}" required>
+
+        <label for="new_service_type">Тип услуги:</label>
+          <select id="new_service_type" name="new_service_type" required>
+            <option value="tutor">Репетитор</option>
+            <option value="accountant">Бухгалтер</option>
+            <option value="programmer">Программист</option>
+          </select>
+
+        <label for="new_experience">Стаж:</label>
+        <input type="text" id="new_experience" name="new_experience" value="{{ current_user.experience }}" required>
+
+        <label for="service_price">Стоимость услуги:</label>
+        <input type="text" id="new_service_price" name="new_service_price" value="{{ current_user.service_price }}" required>
+
+        <label for="about_me">О себе:</label>
+        <textarea id="new_about_me" name="new_about_me" required>{{ current_user.about_me }}</textarea>
+
+        <button type="submit">Сохранить изменения</button>
+    </form>
+  </main>
+
+    <footer>
+      <nav><a href="{{ url_for('main') }}">На главную</a></nav>
+  </footer>
+</body>
+</html>
